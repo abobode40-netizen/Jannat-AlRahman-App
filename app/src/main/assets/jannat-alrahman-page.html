@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تطبيق جنّة الرحمن - نسخة التصدير والتصفح الذاتي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F6B50;
+      --primary-dark: #094735;
+      --gold: #C19E2B;
+      --bg: #FAF7F0;
+      --card-bg: #FFFFFF;
+      --text: #19302A;
+      --border: #E5DDCF;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 16px;
+      direction: rtl;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .header {
+      background: linear-gradient(135deg, #0B5C46, #168064, #276D5A);
+      color: white;
+      padding: 24px 20px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 10px 25px -5px rgba(15, 107, 80, 0.3);
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .header h1 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .header p {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .card h2 {
+      font-size: 16px;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .quran-quote {
+      font-family: 'Amiri Quran', 'Amiri', serif;
+      font-size: 20px;
+      text-align: center;
+      line-height: 2.2;
+      color: #0F6B50;
+      padding: 16px;
+      background: #F4EFE6;
+      border-radius: 16px;
+      border: 1px dashed var(--gold);
+      margin-bottom: 14px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #C19E2B, #D8B43F);
+      color: #fff;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .stat-box {
+      background: #FAF7F0;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .stat-label {
+      font-size: 11px;
+      color: #666;
+    }
+    .code-box {
+      background: #111A16;
+      color: #2DD4BF;
+      padding: 12px;
+      border-radius: 12px;
+      font-family: monospace;
+      font-size: 11px;
+      direction: ltr;
+      text-align: left;
+      overflow-x: auto;
+      margin-top: 8px;
+      max-height: 140px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      margin-top: 20px;
+      padding-bottom: 20px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .feature-item {
+      background: #F4EFE6;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 12px;
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🌿 تطبيق جنّة الرحمن</h1>
+      <p>نسخة التطبيق الكاملة والموثقة</p>
+    </div>
+
+    <div class="card">
+      <div class="quran-quote">
+        ﷽<br>
+        ﴿ إِنَّ هَٰذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ وَيُبَشِّرُ الْمُؤْمِنِينَ الَّذِينَ يَعْمَلُونَ الصَّالِحَاتِ أَنَّ لَهُمْ أَجْرًا كَبِيرًا ﴾
+      </div>
+      <p style="font-size: 13px; color: #555; text-align: center;">
+        تطبيق جنّة الرحمن للقرآن الكريم والأذكار والعبادات وتتبع التقدم الإيماني.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>📊 ملخص البيانات</h2>
+      <div class="grid-2" id="statsGrid">
+        <div class="stat-box">
+          <div class="stat-num" id="statPage">107</div>
+          <div class="stat-label">آخر صفحة قرآنية</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="statTree">0%</div>
+          <div class="stat-label">نسبة نمو الشجرة</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>✨ المميزات</h2>
+      <div class="features">
+        <div class="feature-item">📖 تلاوة القرآن</div>
+        <div class="feature-item">🎙️ البحث الصوتي</div>
+        <div class="feature-item">🤲 الأذكار اليومية</div>
+        <div class="feature-item">🌳 شجرة العبادات</div>
+        <div class="feature-item">⏰ التنبيهات</div>
+        <div class="feature-item">📱 وضع أوفلاين</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💾 النسخة الاحتياطية</h2>
+      <p style="font-size: 12px; color: #666;">
+        بياناتك محفوظة بأمان ويمكن استيرادها في أي وقت:
+      </p>
+      <pre class="code-box" id="backupPre">{
+  "exportedAt": "2026-08-29",
+  "lastReadPage": 107,
+  "sebhaCount": 13,
+  "treeGrowth": 0
+}</pre>
+      <button class="btn" style="margin-top: 12px;" onclick="copyBackup()">📋 نسخ البي��نات</button>
+    </div>
+
+    <div class="card">
+      <h2>🚀 كيفية البدء</h2>
+      <p style="font-size: 13px; color: #555; margin-bottom: 12px;">
+        1. تثبيت التطبيق على جهازك<br>
+        2. السماح بالأذونات المطلوبة (ميكروفون، تخزين)<br>
+        3. البدء في رحلتك الإيمانية مع جنّة الرحمن
+      </p>
+      <button class="btn btn-gold">🌟 تثبيت التطبيق الآن</button>
+    </div>
+
+    <div class="footer">
+      تطبيق جنّة الرحمن • صدقة جارية • جزاكم الله خيراً 💚
+    </div>
+  </div>
+
+  <script>
+    function copyBackup() {
+      const text = document.getElementById('backupPre').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('✅ تم نسخ البيانات بنجاح!');
+      }).catch(() => {
+        alert('يرجى تحديد النص ونسخه يدوياً.');
+      });
+    }
+  </script>
+</body>
+</html>
