@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">جنّة الرحمن</string>
+    <string name="app_description">تطبيق قرآني إسلامي متكامل</string>
+    <string name="quran">القرآن الكريم</string>
+    <string name="athkar">الأذكار</string>
+    <string name="tree">شجرة العبادات</string>
+    <string name="settings">الإعدادات</string>
+    <string name="about">عن التطبيق</string>
+    <string name="backup">النسخة الاحتياطية</string>
+    <string name="search">بحث</string>
+    <string name="voice_search">بحث صوتي</string>
+    <string name="record">تسجيل</string>
+    <string name="play">تشغيل</string>
+    <string name="pause">إيقاف مؤقت</string>
+    <string name="stop">إيقاف</string>
+    <string name="delete">حذف</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="ok">حسناً</string>
+    <string name="error">خطأ</string>
+    <string name="success">نجاح</string>
+    <string name="loading">جاري التحميل...</string>
+    <string name="no_data">لا توجد بيانات</string>
+    <string name="permission_denied">تم رفض الإذن</string>
+    <string name="mic_permission_required">يتطلب إذن الميكروفون</string>
+    <string name="storage_permission_required">يتطلب إذن التخزين</string>
+</resources>
