@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@color/card_bg"
+    android:layout_margin="8dp">
+
+    <!-- عنوان الذكر -->
+    <TextView
+        android:id="@+id/athkarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/primary" />
+
+    <!-- محتوى الذكر -->
+    <TextView
+        android:id="@+id/athkarContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="8dp"
+        android:lineSpacingMultiplier="1.6" />
+
+    <!-- عدد التكرارات -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layoutDirection="rtl">
+
+        <Button
+            android:id="@+id/decreaseBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="−"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="@color/background" />
+
+        <Button
+            android:id="@+id/increaseBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
